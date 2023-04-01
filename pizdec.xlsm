@@ -1,0 +1,573 @@
+Sub Pr52_Ziuz()
+'
+' Pr5_Ziuz Макрос
+' Макрос для форматування таблиці Варіант 109 Зюзь, ХК-21
+
+' у активну клітинку А1 вписую текст "№"
+    ActiveCell.FormulaR1C1 = "№"
+' виділяю клітинку В1
+    Range("B1").Select
+' у активну клітинку С1 вписую текст "Тип"
+    ActiveCell.FormulaR1C1 = "Тип"
+' виділяю клітинку С1
+    Range("C1").Select
+' у активну клітинку С1 вписую текст "Виробник"
+    ActiveCell.FormulaR1C1 = "Виробник"
+' виділяю клітинку D1
+    Range("D1").Select
+' у виділеній клітинці D1 ставлю такі параметри
+    With Selection.Font
+' назва шрифта "Arіal"
+        .Name = "Arial"
+' розмір шрифта "11"
+        .Size = 11
+' закресленного тексту немає
+        .Strikethrough = False
+' надстрокового індексу немає
+        .Superscript = False
+' підстрокового індексу немає
+        .Subscript = False
+' контурного шрифта немає
+        .OutlineFont = False
+' тіні немає
+        .Shadow = False
+' підкреслення
+        .Underline = xlUnderlineStyleNone
+' колір
+        .ThemeColor = xlThemeColorLight1
+' відтінок та тінь дорівнюють нулю
+        .TintAndShade = 0
+' шрифт теми
+        .ThemeFont = xlThemeFontNone
+' завершую блок роботи
+    End With
+' у виділеній клітинці D1 ставлю такі параметри(я змінювала лише розмір символів на "14", тому всі дії залишилися ті самі. Не буду повторно описувати)
+    With Selection.Font
+        .Name = "Times New Roman"
+        .Size = 14
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+' завершую блок роботи
+    End With
+' шрифт відформатовано як "жирний"
+    Selection.Font.Bold = True
+' у активну клітинку D1 вписую текст "Модель"
+    ActiveCell.FormulaR1C1 = "Модель"
+' виділяю клітинку Е1
+    Range("E1").Select
+' у виділеній клітинці Е1 ставлю такі параметри
+    With Selection.Font
+'  назва шрифта "Arіal"
+        .Name = "Arial"
+' розмір шрифта "11"
+        .Size = 11
+' закресленного тексту немає
+        .Strikethrough = False
+'  надстрокового індексу немає
+        .Superscript = False
+'  підстрокового індексу немає
+        .Subscript = False
+' контурного шрифта немає
+        .OutlineFont = False
+' тіні немає
+        .Shadow = False
+' підкреслення
+        .Underline = xlUnderlineStyleNone
+' колір
+        .ThemeColor = xlThemeColorLight1
+' відтінок та тінь дорівнюють нулю
+        .TintAndShade = 0
+' шрифт теми
+        .ThemeFont = xlThemeFontNone
+' завершую блок роботи
+    End With
+' у виділеній клітинці Е1 ставлю такі параметри(я змінювала лише розмір символів на "14", тому всі дії залишилися ті самі. Не буду повторно описувати)
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 14
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+' завершую блок роботи
+    End With
+' шрифт відформатовано як "жирний"
+    Selection.Font.Bold = True
+' у активну клітику Е1 вписую текст "Кільк.обертів,rpm"
+    ActiveCell.FormulaR1C1 = "Кільк.обертів,rpm"
+' виділяю кнітинку F1
+    Range("F1").Select
+' у виділеній клітинці F1 ставлю такі параметри
+    With Selection.Font
+        .Name = "Arial" ' назва шрифта "Arіal"
+        .Size = 11 ' розмір шрифта "11"
+' закресленного тексту немає
+        .Strikethrough = False
+' надстрокового індексу немає
+        .Superscript = False
+' підстрокового індексу немає
+        .Subscript = False
+' контурного шрифта немає
+        .OutlineFont = False
+' тіні немає
+        .Shadow = False
+' підкреслення
+        .Underline = xlUnderlineStyleNone
+' колір
+        .ThemeColor = xlThemeColorLight1
+' відтінок та тінь дорівнюють нулю
+        .TintAndShade = 0
+' шрифт теми
+        .ThemeFont = xlThemeFontNone
+' завершую блок роботи
+    End With
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 14
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    Selection.Font.Bold = True
+    ActiveCell.FormulaR1C1 = "Об'єм(Гб)"
+    Range("G1").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 14
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    Selection.Font.Bold = True
+    ActiveCell.FormulaR1C1 = "Ціна(Грн)"
+    Range("A1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    Range("B1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    Range("C1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    Range("D1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    Range("E1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    Range("F1").Select
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Range("G1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    Range("A2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "1"
+    Range("B2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "HDD"
+    Range("C2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "Seagate"
+    Range("D2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "ST3300657SS"
+    Range("E2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = " 7.2"
+    Range("F2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "300"
+    Range("G2").Select
+    With Selection.Font
+        .Name = "Arial"
+        .Size = 11
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "4202"
+    Range("A1:G2").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlDouble
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThick
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlDouble
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThick
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlDouble
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThick
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlDouble
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThick
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlDouble
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThick
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlDouble
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThick
+    End With
+    Range("G2").Select
+End Sub
